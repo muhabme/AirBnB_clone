@@ -6,7 +6,10 @@ Defines `FileStorage` class.
 """
 import os
 import json
+
 from models.base_model import BaseModel
+
+from models.user import User
 
 
 class FileStorage():
@@ -44,7 +47,8 @@ class FileStorage():
         Deserializes the JSON file to __objects only if the JSON
         file exists; otherwise, does nothing
         """
-        current_classes = {'BaseModel': BaseModel}
+        current_classes = {'BaseModel': BaseModel,
+                           'User': User}
 
         if not os.path.exists(FileStorage.__file_path):
             return

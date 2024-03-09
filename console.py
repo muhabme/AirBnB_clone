@@ -9,8 +9,11 @@ from models import storage
 from utils.utils import parse_str
 
 from models.base_model import BaseModel
+from models.user import User
 
-current_classes = {'BaseModel': BaseModel}
+current_classes = {'BaseModel': BaseModel,
+                   'User': User
+                   }
 
 class HBNBCommand(cmd.Cmd):
     """

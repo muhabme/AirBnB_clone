@@ -23,9 +23,7 @@ class HBNBCommand(cmd.Cmd):
     prompt = "(hbnb) "
 
     def precmd(self, line):
-        """Preprocess commands before execution.
-
-        Allows for alternate command syntax and handles command preprocessing.
+        """Defines instructions to execute before <line> is interpreted.
         """
         if not line:
             return '\n'

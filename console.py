@@ -23,8 +23,7 @@ class HBNBCommand(cmd.Cmd):
     prompt = "(hbnb) "
 
     def precmd(self, line):
-        """
-        Preprocess commands before execution.
+        """Preprocess commands before execution.
 
         Allows for alternate command syntax and handles command preprocessing.
         """
@@ -64,21 +63,18 @@ class HBNBCommand(cmd.Cmd):
                     re.sub("[\"\']", "", args[1]), args[2])
 
     def do_help(self, arg):
-        """
-        To get help on a command, type help <topic>.
+        """To get help on a command, type help <topic>.
         """
         return super().do_help(arg)
 
     def do_EOF(self, line):
-        """
-        Inbuilt EOF command to catch errors.
+        """Inbuilt EOF command to catch errors.
         """
         print("")
         return True
 
     def do_quit(self, arg):
-        """
-        Quit command to exit the program.
+        """Quit command to exit the program.
         """
         return True
 
